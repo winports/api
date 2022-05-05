@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_orders_boxes",
+  "info": {
+    "displayName": "Boxes",
+    "icon": "box"
+  },
+  "options": {},
+  "attributes": {
+    "uuid": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "created": {
+      "type": "datetime"
+    },
+    "value": {
+      "type": "decimal"
+    },
+    "sended": {
+      "type": "datetime"
+    },
+    "trackNumber": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive",
+        "canceled",
+        "sended",
+        "paused"
+      ]
+    }
+  }
+}
